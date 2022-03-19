@@ -16,7 +16,10 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    author = UserSerializer()
+    
     class Meta:
+        
         model = Reviews
         fields = ("headphone", "author", "review")
 

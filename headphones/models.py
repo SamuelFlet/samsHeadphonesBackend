@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
 
 class Headphone(models.Model):
@@ -14,6 +14,6 @@ class Reviews(models.Model):
     headphone = models.ForeignKey(
         Headphone, on_delete=models.CASCADE, related_name="reviews"
     )
-    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     review = models.TextField()
     price_rating = models.IntegerField(null=True)
