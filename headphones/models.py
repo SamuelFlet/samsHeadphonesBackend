@@ -16,4 +16,4 @@ class Reviews(models.Model):
     )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     review = models.TextField()
-    price_rating = models.IntegerField()
+    price_rating = models.IntegerField(default=0)
