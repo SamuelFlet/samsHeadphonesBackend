@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['.herokuapp.com']
 CORS_ALLOW_ALL_ORIGINS = True
 
 INSTALLED_APPS = [
+    'core.apps.CoreConfig',
     'headphones',
     'corsheaders',
     'rest_framework',

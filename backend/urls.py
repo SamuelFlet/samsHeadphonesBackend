@@ -30,5 +30,5 @@ urlpatterns = [
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("admin/", admin.site.urls),
     path('token-auth/', obtain_jwt_token),
-    path('headphones/', include('headphones.urls'))
+    path('core/', include('core.urls'))
 ]
