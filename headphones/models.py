@@ -5,9 +5,9 @@ from django.contrib.auth.models import User
 class Headphone(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    impedance = models.PositiveSmallIntegerField()
+    impedance = models.PositiveSmallIntegerField(default=0)
     frequency = models.TextField(default="0 Hz - 0 KHz")
-    sensitivity = models.PositiveSmallIntegerField()
+    sensitivity = models.PositiveSmallIntegerField(default=0)
     def _str_(self):
         return self.title
 
