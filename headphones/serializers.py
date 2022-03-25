@@ -52,4 +52,4 @@ class CommentSerializer(serializers.ModelSerializer):
 class HeadphoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Headphone
-        fields = ("id", "name", "description")
+        fields = ("id", "name", "description", "impedance","frequency", "sensitivity")
