@@ -46,7 +46,7 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = Reviews
-        fields = ("headphone", "username", "author", "review", "price_rating")
+        fields = ("headphone", "title","date","username", "author", "review", "price_rating")
 
 
 class HeadphoneSerializer(serializers.ModelSerializer):
