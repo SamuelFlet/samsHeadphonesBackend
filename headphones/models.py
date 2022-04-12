@@ -17,7 +17,7 @@ class Reviews(models.Model):
         Headphone, on_delete=models.CASCADE, related_name="reviews"
     )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.TextField()
+    title = models.TextField(default="Default Title")
     review = models.TextField()
     date = models.DateField(("Date"), default=datetime.date.today)
     price_rating = models.IntegerField(default=0)
