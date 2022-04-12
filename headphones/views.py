@@ -40,4 +40,4 @@ class HeadphoneView(viewsets.ModelViewSet):
 
 class ReviewView(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
-    queryset = Reviews.objects.all()
+    queryset = Reviews.objects.all().order_by("-id")
